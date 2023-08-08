@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        // functional component
+        let FunctionalComponent = (props) => {
+            return (
+                <div>
+                    {
+                    props.obj.map((el, ind) => {
+                        return (
+                        <div key={ind.toString()}>
+                            <h1 className={"bg-primary"}>{el.a}</h1>
+                            <p className={"bg-secondary"}>{el.b}</p>
+                        </div>
+                        )})
+                    }
+                </div>
+            )
+        }
+        let root = ReactDOM.createRoot(document.getElementById('functional'));
+        root.render(<FunctionalComponent obj={[{'a':'Functional header','b':'Functional paragraph'}]} />);
+    
+        // class component
+        class ClassComponent extends React.Component {
+            render() {
+                const { obj } = this.props;
+                return (
+                    <div>
+                        {
+                        obj.map((el, ind) => {
+                            return (
+                            <div key={ind.toString()}>
+                                <h1 className={"bg-primary"}>{el.a}</h1>
+                                <p className={"bg-secondary"}>{el.b}</p>
+                            </div>
+                            )})
+                        }
+                    </div>
+                )
+            }
+        }
+        ReactDOM.render(<ClassComponent obj={[{'a':'Class header','b':'Class paragraph'}]} />, 
+            document.getElementById('class'));
+    </script>
+</head>
+<body>
+    <div id="body">
+        <div id="functional"></div>
+        <div id="class"></div>
+    </div>
+</body>
+</html>

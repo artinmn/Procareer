@@ -1,0 +1,33 @@
+.bg-color {
+    background-color: blue;
+}
+#main {
+    float: left;
+}
+#left {
+    width: 70vw;
+    float: left;
+    margin: 25px;
+}
+#right {
+    float: left;
+    padding: 20px;
+}
+#image {
+    border-radius: 250px;
+    border: 10px solid chocolate;
+    max-width: 250px;
+    max-height: 250px;
+}
+#name {
+    font-size: 70px; 
+    font-weight: 100;
+}
+#email {
+    font-size: 30px; 
+    font-weight: 100;
+}
+#title {
+    font-size: 20px; 
+    font-weight: 700;
+}

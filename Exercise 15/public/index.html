@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            let regulardiv = document.getElementById('regulardiv');
+            let reactDiv = ReactDOM.createRoot(document.getElementById('reactdiv'));
+            let render = () => {
+                regulardiv.innerHTML = `<input/> <p> ${new Date()} </p>` ;
+                let dateElem = React.createElement('div',{},
+                    [React.createElement('input',{'key':'input'},null),
+                     React.createElement('p',{'key':'p'},(new Date()).toString())]);
+                reactDiv.render(dateElem);
+            }
+            setInterval(render,1000);
+        //}
+        });
+    </script>
+</head>
+<body>
+ <h1> Digital Clock</h1>
+    <h3>HTML Div with inner html</h3>
+    <div id="regulardiv">Should display time</div>
+    <h3>React Div below this</h3>
+    <div id="reactdiv">Should display time</div>
+</body>
+</html>

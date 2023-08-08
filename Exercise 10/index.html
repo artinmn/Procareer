@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="javascript.js"></script>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-color" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand p2">Best Buy</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse p-2" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                <button id="home-btn" class="nav-link active" aria-current="page"
+                    onclick="navClick('home')">
+                    <i class="fs-5 bi bi-house-fill"></i>
+                    Home
+                </button>
+                </li>
+                <li class="nav-item">
+                <button id="about-btn" class="nav-link" onclick="navClick('about')">
+                    <i class="fs-5 bi bi-list-ul"></i>
+                    About Us
+                </a>
+                </li>
+                <li class="nav-item">
+                <button id="products-btn" class="nav-link" onclick="navClick('products')">
+                    <i class="fs-5 bi bi-info-lg"></i>
+                    Products
+                </button>
+                </li>
+                <li class="nav-item">
+                <button id="contact-btn" class="nav-link" onclick="navClick('contact')">
+                    <i class="fs-5 bi bi-person-lines-fill"></i>
+                    Contact Us
+                </button>
+                </li>
+            </ul>
+            <button id="login-btn" class="nav-link" style="color: white;" onclick="navClick('login')"
+                data-bs-toggle="modal" data-bs-target="#login-page">
+                <i class="fs-5 bi bi-box-arrow-in-right"></i>
+                Login
+            </button>
+            </div>
+        </div>
+    </nav>
+    <div id="login-page" class="modal fade" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-6">
+                        <i class="fs-5 bi bi-envelope-fill"></i>
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email">
+                    </div>
+                      <div class="mb-6">
+                        <i class="fs-5 bi bi-lock-fill"></i>
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password">
+                      </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-success btn-lg" data-bs-dismiss="modal">Login</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="home-page" class="container-fluid">
+        <img src="office_desk_large.jpg" alt="main page image" />
+    </div>
+    <div id="about-page" style="display: none;" class="container-fluid">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem at quasi sint, ipsam harum 
+            provident illum quibusdam eum laboriosam maxime nam sequi temporibus atque? Placeat numquam 
+            rerum asperiores error debitis!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi veritatis laborum aspernatur 
+            unde nulla nesciunt voluptatum nam illum! Vero exercitationem cupiditate voluptate quis. 
+            Quaerat similique vero quasi iusto excepturi harum. Lorem ipsum dolor sit amet consectetur 
+            adipisicing elit. Corporis in nemo facere nulla! Nemo ipsam doloribus nobis architecto, soluta
+             consectetur sint esse dolorum culpa itaque ducimus, quis eveniet aliquam dolorem? Lorem 
+             ipsum dolor sit amet consectetur adipisicing elit. Id, omnis saepe nam sit, est distinctio,
+              odio dolore porro dolor natus minus temporibus? Sed adipisci, non voluptatibus excepturi
+               culpa atque minus. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt, sint
+                voluptates? Odit autem sit sapiente ex, consectetur ipsam ad vero. Quo numquam, vero
+                 tempore architecto dolor deleniti itaque quasi commodi. Lorem, ipsum dolor sit amet
+                  consectetur adipisicing elit. Dolore libero quo eligendi harum optio nam illo ad quaerat
+                   in sit, laboriosam hic impedit eius illum, tempora voluptatum! Animi, impedit quod!
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nisi nam iusto
+                     suscipit repellat? Impedit nisi eius eveniet sit eligendi, quam dolore, molestiae
+                      mollitia sequi totam est earum voluptatum quisquam? Lorem ipsum dolor sit amet,
+                       consectetur adipisicing elit. Aspernatur obcaecati ex delectus ipsam? Nostrum
+                        voluptatum libero delectus expedita consectetur placeat aut quo soluta id dolore
+                         officia quis adipisci, consequuntur sapiente!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex cum ad tempore corporis, 
+            numquam consectetur sed aut quo, aspernatur dolorem laboriosam. Numquam modi harum alias
+             atque officia labore, quam nobis!</p>
+        <p>Lorem</br>ipsum</br>dolor</p>
+    </div>
+    <div id="contact-page" style="display: none;" class="container-fluid">
+        <h1>Contact Us</h1>
+        <!-- <form method="post"> -->
+            <label for="name">Name: </label><br>
+            <input type="text" name="name" size="53" required/> <br>
+            <label for="message">Message: </label> <br>
+            <textarea name="message" cols="50" rows="5" required></textarea><br>
+            <button type="submit"> Submit</button>
+        <!-- </form>   -->
+    </div>
+    <div id="products-page" style="display: none;" class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col p-4">
+                    <img class="border border-primary border-1 rounded p-1" 
+                    src="https://loremflickr.com/200/200/gadget?random=1" alt="Random Image 1" />
+                </div>
+                <div class="col p-4">
+                    <img class="border border-primary border-1 rounded p-1" 
+                    src="https://loremflickr.com/200/200/gadget?random=2" alt="Random Image 2" />
+                </div>
+                <div class="col p-4">
+                    <img class="border border-primary border-1 rounded p-1" 
+                    src="https://loremflickr.com/200/200/gadget?random=3" alt="Random Image 3" />
+                </div>
+                <div class="col p-4">
+                    <img class="border border-primary border-1 rounded p-1" 
+                    src="https://loremflickr.com/200/200/gadget?random=4" alt="Random Image 4" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col p-4">
+                    <img class="border border-primary border-1 rounded p-1" 
+                    src="https://loremflickr.com/200/200/gadget?random=5" alt="Random Image 5" />
+                </div>
+                <div class="col p-4">
+                    <img class="border border-primary border-1 rounded p-1" 
+                    src="https://loremflickr.com/200/200/gadget?random=6" alt="Random Image 6" />
+                </div>
+                <div class="col p-4">
+                    <img class="border border-primary border-1 rounded p-1" 
+                    src="https://loremflickr.com/200/200/gadget?random=7" alt="Random Image 7" />
+                </div>
+                <div class="col p-4">
+                    <img class="border border-primary border-1 rounded p-1" 
+                    src="https://loremflickr.com/200/200/gadget?random=8" alt="Random Image 8" />
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+    </html>
